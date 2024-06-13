@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "BTwfkF6lMsWBDOox4NcbhwW1WCSb4Ex5OVLc5sX31Gw1Jjs4oTwQIddom1Ym+3DlzR+4WXfkS6IAo88gMKiWFw==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\38762\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1012",
+      "level": "Error",
+      "message": "Platform version is not present for one or more target frameworks, even though they have specified a platform: net6.0-ios, net6.0-maccatalyst"
+    }
+  ]
+}

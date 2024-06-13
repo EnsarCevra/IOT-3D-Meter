@@ -1,0 +1,96 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E0B7A5F7-5E17-4EFE-97F3-444EF6FB4614}|3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor.csproj|c:\\users\\38762\\source\\repos\\3dmeter_iot_blazor\\3dmeter_iot_blazor\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E0B7A5F7-5E17-4EFE-97F3-444EF6FB4614}|3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor.csproj|solutionrelative:3dmeter_iot_blazor\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0B7A5F7-5E17-4EFE-97F3-444EF6FB4614}|3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor.csproj|c:\\users\\38762\\source\\repos\\3dmeter_iot_blazor\\3dmeter_iot_blazor\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0B7A5F7-5E17-4EFE-97F3-444EF6FB4614}|3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor.csproj|solutionrelative:3dmeter_iot_blazor\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0B7A5F7-5E17-4EFE-97F3-444EF6FB4614}|3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor.csproj|c:\\users\\38762\\source\\repos\\3dmeter_iot_blazor\\3dmeter_iot_blazor\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E0B7A5F7-5E17-4EFE-97F3-444EF6FB4614}|3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor.csproj|solutionrelative:3dmeter_iot_blazor\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0B7A5F7-5E17-4EFE-97F3-444EF6FB4614}|3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor.csproj|c:\\users\\38762\\source\\repos\\3dmeter_iot_blazor\\3dmeter_iot_blazor\\main.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E0B7A5F7-5E17-4EFE-97F3-444EF6FB4614}|3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor.csproj|solutionrelative:3dmeter_iot_blazor\\main.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 352,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "3DMeter_IOT_Blazor\\Shared\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "3DMeter_IOT_Blazor\\Shared\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T13:25:29.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "3DMeter_IOT_Blazor\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor\\MainPage.xaml.cs",
+              "RelativeToolTip": "3DMeter_IOT_Blazor\\MainPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T13:16:23.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "3DMeter_IOT_Blazor\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "3DMeter_IOT_Blazor\\Shared\\NavMenu.razor",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T13:16:34.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.razor",
+              "DocumentMoniker": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor\\Main.razor",
+              "RelativeDocumentMoniker": "3DMeter_IOT_Blazor\\Main.razor",
+              "ToolTip": "C:\\Users\\38762\\source\\repos\\3DMeter_IOT_Blazor\\3DMeter_IOT_Blazor\\Main.razor",
+              "RelativeToolTip": "3DMeter_IOT_Blazor\\Main.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T13:16:15.313Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 352,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

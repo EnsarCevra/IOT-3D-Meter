@@ -1,0 +1,1 @@
+C:\Users\38762\source\repos\3DMeter_IOT_Blazor\3DMeter_IOT_Blazor\3DMeter_IOT_Blazor.csproj;x64

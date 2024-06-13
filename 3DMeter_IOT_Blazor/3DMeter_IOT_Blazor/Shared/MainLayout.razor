@@ -1,0 +1,258 @@
+﻿@using FireSharp.Config;
+@using FireSharp.Interfaces;
+@inherits LayoutComponentBase
+
+<div class="page">
+	<div class="sidebar">
+		<NavMenu />
+	</div>
+
+	<main>
+		<div id="main_button">
+			<button id="device_manager" class="@ButtonDisplay" @onclick="ToogleDeviceStatus">@ButtonText</button>
+		</div>
+
+		<div class="control_item">
+			<label>Distance:  @DistanceValue cm</label>
+			<div class="form-check form-switch">
+				<input style="width:65px; height:30px" class=" form-check-input" type="checkbox"
+					   role="switch" id="cbDistance" @bind="DistanceStatus"/>
+			</div>
+		</div>
+
+		
+		<div class="control_item">
+			<label>Width: @WidthValue cm</label>
+			<div class="form-check form-switch">
+				<input style="width:65px; height:30px" class=" form-check-input" type="checkbox"
+					   role="switch" id="cbWidth" @bind="WidthStatus" />
+			</div>
+		</div>
+
+		<div class="control_item">
+			<label>Height: @HeightValue cm</label>
+			<div class="form-check form-switch">
+				<input style="width:65px; height:30px" class=" form-check-input" type="checkbox"
+					   role="switch" id="cbHeight" @bind="HeightStatus" />
+			</div>
+		</div>
+
+		@if(ShowCalculationDiv)
+		{
+			<div class="control_item">
+				<label>@CalcuationText: @Result @MeasuringUnit</label>
+			</div>
+		}
+	</main>
+</div>
+
+
+@code
+{
+	private bool DeviceStatus;
+
+	private bool _DistanceStatus = false;
+	public bool DistanceStatus
+	{
+		get => _DistanceStatus;
+		set
+		{
+			_DistanceStatus = value;
+			client.Update("Status", new
+			{
+				Distance = value
+			});
+		}
+	}
+
+
+	private bool _WidthStatus = false;
+	public bool WidthStatus
+	{
+		get => _WidthStatus;
+		set
+		{
+			_WidthStatus = value;
+			client.Update("Status", new
+			{
+				Width = value
+			});
+		}
+	}
+	private bool _HeightStatus;
+	private bool HeightStatus
+	{
+		get => _HeightStatus;
+		set
+		{
+			_HeightStatus = value;
+			client.Update("Status", new
+			{
+				Height = value
+			});
+		}
+	}
+
+	private int _DistanceValue;
+	public int DistanceValue
+	{
+		get => _DistanceValue;
+		set
+		{
+			if(DistanceStatus)
+			{
+				_DistanceValue = value + 22;
+			}
+			else
+			{
+				_DistanceValue = 0;
+			}
+		}
+	}
+
+	private int _WidthValue;
+	public int WidthValue
+	{
+		get => _WidthValue;
+		set
+		{
+			if(WidthStatus)
+			{
+				_WidthValue = value + 7;
+			}
+			else
+			{
+				_WidthValue = 0;
+			}
+		}
+	}
+
+
+	private int _HeightValue;
+	public int HeightValue
+	{
+		get => _HeightValue;
+		set
+		{
+			if(HeightStatus)
+			{
+				_HeightValue = value + 4;
+			}
+			else
+			{
+				_HeightValue = 0;
+			}
+		}
+	}
+
+	IFirebaseConfig configg;
+	IFirebaseClient client;
+	Task EstablishConnection()
+	{
+		configg = new FirebaseConfig()
+		{
+			AuthSecret = "YOUR_AUTH_SECRET",
+			BasePath = "BASE_PATH"
+		};
+		client = new FireSharp.FirebaseClient(configg);
+
+		return Task.CompletedTask;
+	}
+
+	protected override void OnInitialized()
+	{
+		base.OnInitialized();
+		EstablishConnection();
+		GetData();
+	}
+	public async void GetData()
+	{
+		while(true)
+		{
+			var distanceRaw = await client.GetAsync("data/Distance");
+			DistanceValue = int.Parse(distanceRaw.Body);
+
+
+
+			var heigthRaw = await client.GetAsync("data/Height");
+			HeightValue = int.Parse(heigthRaw.Body);
+
+
+			var widhtRaw = await client.GetAsync("data/Width");
+			WidthValue = int.Parse(widhtRaw.Body);
+
+
+
+			Calculate();
+			StateHasChanged();
+		}
+
+	}
+
+	private string ButtonDisplay => DeviceStatus?"selected":"not_selected";
+	private string ButtonText => DeviceStatus ? "On" : "Off";
+	public async void ToogleDeviceStatus()
+	{
+		//when device is off, turn off all checkboxes 
+		DeviceStatus = !DeviceStatus;
+		if(DeviceStatus == false)
+		{
+			DistanceStatus = false;
+			HeightStatus = false;
+			WidthStatus = false;
+		}
+		client.Update("Status", new
+		{
+			Device = DeviceStatus,
+			Distance = DistanceStatus,
+			Width = DistanceStatus,
+			Height = DistanceStatus
+		});
+	}
+
+	public double Result = 0;
+	public string CalcuationText;
+	public string MeasuringUnit;
+	public bool ShowCalculationDiv;
+	public void Calculate()
+	{
+		ShowCalculationDiv = true;
+		MeasuringUnit = "m2";
+		if(DistanceStatus && WidthStatus && HeightStatus)
+		{
+			Result = MultiplyVariables(DistanceValue, WidthValue, HeightValue);
+			CalcuationText = "Volume";
+			MeasuringUnit = "m3";
+		}
+		else if (DistanceStatus && WidthStatus)
+		{
+			Result = MultiplyVariables(DistanceValue, WidthValue);
+			CalcuationText = "Surface";
+		}
+		else if (DistanceStatus && HeightStatus)
+		{
+			Result = MultiplyVariables(DistanceValue, HeightValue);
+			CalcuationText = "Surface";
+		}
+		else if(HeightStatus && WidthStatus)
+		{
+			Result = MultiplyVariables(WidthValue, HeightValue);
+			CalcuationText = "Surface";
+		}
+		else
+		{
+			Result = 0;
+			ShowCalculationDiv = false;
+		}
+	}
+	double MultiplyVariables(params int[] variables)
+	{
+		int result = 1;
+		int exponent = variables.Count();
+		foreach (int variable in variables)
+		{
+			result *= variable;
+		}
+		return result/(Math.Pow(100,exponent));
+	}
+}
