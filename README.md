@@ -2,7 +2,11 @@
 
 ## Overview
 
-This project is an IoT device that uses three ultrasonic sensors to measure distances in all directions in 3D space: width, height, and depth. The device is controlled by a .NET MAUI Blazor mobile application, which allows users to manage the device and read measurements.
+This project is an simple IoT device that uses three ultrasonic sensors to measure distances in all directions in 3D space: width, height, and depth. The device is controlled by a .NET MAUI Blazor mobile application, which allows users to manage the device and read measurements.
+<div display:flex>
+  <img src="images/Device_picture_2.jpg" height="300px"/>
+  <img src="images/Device_picture_3.jpg" height="300px"/>
+</div>
 
 ## Features
 
@@ -66,9 +70,15 @@ This project is an IoT device that uses three ultrasonic sensors to measure dist
 3. **Read Measurements**:
     - The application will display real-time measurements from each active sensor.
     - You can also view the calculated surface area or volume based on the active sensors.
+<div display:flex>
+  <img src="images/Application_screenshot_0.jpg" height="300px"/>
+  <img src="images/Application_screenshot_1.jpg" height="300px"/>
+  <img src="images/Application_screenshot_2.jpg" height="300px"/>
+  <img src="images/Application_screenshot_3.jpg" height="300px"/>
+</div>
 
 
 
 ## Contact
 
-For any inquiries or support, please contact cevraensar@gmai.com
+For any inquiries or support, please contact cevraensar@gmail.com
