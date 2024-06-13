@@ -44,12 +44,8 @@ This project is an simple IoT device that uses three ultrasonic sensors to measu
 
 ### Software Setup
 
-1. **Clone the Repository**:
-    ```sh
-    git clone https://github.com/your-repo/iot-3d-measurement.git
-    cd iot-3d-measurement
-    ```
-
+1. **Clone the Repository**
+    
 2. **Open the Project**:
     - Open the project in your preferred .NET development environment.
 
